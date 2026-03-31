@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Polyline Editor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div>
+        <h1>Polyline Editor</h1>
+        <p class="subtitle">Interactive Polyline Editing Tool</p>
+      </div>
+    </header>
+
+    <section class="workspace">
+      <aside class="sidebar">
+        <div class="tool-card">
+          <h2>Tools</h2>
+
+          <button class="tool-btn begin active" data-mode="begin">
+            <span class="btn-icon">✏️</span>
+            <span class="btn-text">Begin</span>
+          </button>
+
+          <button class="tool-btn move" data-mode="move">
+            <span class="btn-icon">✋</span>
+            <span class="btn-text">Move</span>
+          </button>
+
+          <button class="tool-btn delete" data-mode="delete">
+            <span class="btn-icon">🗑️</span>
+            <span class="btn-text">Delete</span>
+          </button>
+
+          <button class="tool-btn refresh" data-mode="refresh">
+            <span class="btn-icon">🔄</span>
+            <span class="btn-text">Refresh</span>
+          </button>
+
+          <button class="tool-btn clear" data-mode="clear">
+            <span class="btn-icon">🧹</span>
+            <span class="btn-text">Clear Canvas</span>
+          </button>
+
+          <button class="tool-btn quit" data-mode="quit">
+            <span class="btn-icon">⛔</span>
+            <span class="btn-text">Quit</span>
+          </button>
+        </div>
+
+        <div class="info-card">
+          <p><strong>Mode:</strong> <span id="modeLabel">BEGIN</span></p>
+          <p><strong>Status:</strong> <span id="statusLabel">Press B and click on canvas to add points.</span></p>
+          <p><strong>Total Polylines:</strong> <span id="polylineCount">0</span></p>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <div class="shortcut-strip">
+          <span><kbd>B</kbd> Begin</span>
+          <span><kbd>M</kbd> Move</span>
+          <span><kbd>D</kbd> Delete</span>
+          <span><kbd>R</kbd> Refresh</span>
+          <span><kbd>Q</kbd> Quit</span>
+          <span><kbd>Enter</kbd> Finish Polyline</span>
+        </div>
+
+        <div class="canvas-panel">
+          <canvas id="canvas" width="1000" height="550"></canvas>
+        </div>
+      </main>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
