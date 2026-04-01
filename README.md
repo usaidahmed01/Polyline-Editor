@@ -118,6 +118,3 @@ During development, a few interaction design questions came up:
   - Click-based interaction
 
 ---
-
-## Deployment
-- **Vercel**
